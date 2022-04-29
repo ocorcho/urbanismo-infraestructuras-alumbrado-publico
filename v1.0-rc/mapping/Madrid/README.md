@@ -1,13 +1,17 @@
 # Ejemplos
-# Alumbrado.csv
-Conjunto de datos que se ha obtenido a partir del ayuntamiento de la ciudad de Madrid 
+En esta carpeta se incluye un ejemplo de transformación de datos abiertos existentes en el portal de datos abiertos del Ayuntamiento de Madrid (https://datos.madrid.es) a RDF, de acuerdo con el vocabulario que se desarrolla en este repositorio. 
+
+La carpeta contiene los siguientes ficheros:
+
+## alumbrado-publico.csv
+Este es el conjunto de datos sobre alumbrado público que está publicado en el portal de datos abiertos del Ayuntamiento de Madrid 
 - https://datos.madrid.es/sites/v/index.jsp?vgnextoid=72b76cc09a800810VgnVCM1000001d4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD
 - Origen de los datos: Ayuntamiento de Madrid 
 - Licencia: https://datos.madrid.es/egob/catalogo/aviso-legal
 
-# mapping.rml
-Es el archivo que contiene los datos del csv estructurados, a partir del vocabulario desarrollado, por rmlMapper.
-  ## Atributos
+## mapping.rml
+Este archivo contiene los mapeos declarativos que se utilizan para la transformación de los datos del CSV a RDF, de acuerdo con el vocabulario. Se consideran los siguientes atributos en el proceso de transformación.
+
   - tipoLampara: Representa el modelo específico de la bombilla.
   - tipoLuminaria: Tiene tres posibilidades a representar, la primera sería tipo LED, la segunda opción sería de tipo DESCARGA (es lo mismo que las antiguas de incandescencia, halogenuros, etc) y por último el tipo LED-DESCARGA cuando se combinan ambos tipos.
   - tipoVia: Representa el tipo de vía de un lugar.
@@ -19,5 +23,5 @@ Es el archivo que contiene los datos del csv estructurados, a partir del vocabul
   - Longitude: Representa la coorddenada X.
   - Latitude: Representa la coordenada Y.
 
-# salida.nt
-Es el resultado obtenido tras procesar los datos con rmlmapper.
+# alumbrado-publico.nt
+Es el resultado obtenido (en formato N-Triples) tras realizar el procesamiento de los datos del CSV con herramientas de transformación, como RMLMapper o morph-kgc.
